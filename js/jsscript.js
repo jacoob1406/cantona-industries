@@ -19,6 +19,7 @@ $(document).ready(function () {
         $('.showButton').addClass('hide');
         $('img').addClass('hide');
         $('.headings').addClass('hide');
+        $('header').css('justify-content', 'center');
     }
 
     function showPlace(e) {
