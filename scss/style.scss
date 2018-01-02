@@ -245,6 +245,7 @@ header{
 }
 
 @media (max-width: 900px){
+
     header {
         ul{
             li{
@@ -320,4 +321,11 @@ a:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
+}
+
+@media (max-width: 400px){
+
+    header{
+        justify-content: flex-start;
+    }
 }
