@@ -35,8 +35,11 @@ $(document).ready(function () {
     });
 
     $('.backButton').on('click', function () {
-        window.location = 'index.html';
-        showMap();
+        //window.location = 'index.html';
+        // showMap();
+
+        $('header').fadeIn(1000);
+        $('.place').fadeOut(100);
     });
 
 
