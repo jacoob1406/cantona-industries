@@ -182,6 +182,9 @@ header {
   header ul li:nth-child(13) {
     padding-left: 84%; } }
 @media (max-width: 767px) {
+  .cantona {
+    padding-bottom: 0; }
+
   .placeinfo {
     width: 90%;
     margin: 1% 0;
