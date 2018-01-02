@@ -1,0 +1,230 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 19, 2017, 10:07:06 PM
+    Author     : Kuba
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px; }
+
+.showButton, .backButton {
+  position: absolute;
+  left: 50%;
+  width: 260px;
+  height: 60px;
+  padding: 20px;
+  background-color: #fff07a;
+  border: 3px solid #c6b639;
+  color: #000;
+  font-size: 20px;
+  margin-left: -130px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+  .showButton:hover, .backButton:hover {
+    opacity: 0.9; }
+
+.hide {
+  display: none; }
+
+.mapPage {
+  width: 100%; }
+
+header {
+  background: url("../media/bg2.jpg") center;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  header ul {
+    width: 100%;
+    padding-top: 3%;
+    text-decoration: nonoe;
+    list-style: none; }
+    header ul a {
+      color: #fff07a;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 0 5px; }
+      header ul a:hover {
+        opacity: 0.8; }
+    header ul li {
+      margin-bottom: 1%; }
+      header ul li:nth-child(1) {
+        padding-left: 5%; }
+      header ul li:nth-child(2) {
+        padding-left: 45%; }
+      header ul li:nth-child(3) {
+        padding-left: 50%; }
+      header ul li:nth-child(4) {
+        padding-left: 48%; }
+      header ul li:nth-child(5) {
+        padding-left: 70%; }
+      header ul li:nth-child(6) {
+        padding-left: 41%; }
+      header ul li:nth-child(7) {
+        padding-left: 18%; }
+      header ul li:nth-child(8) {
+        padding-left: 14%; }
+      header ul li:nth-child(9) {
+        padding-left: 78%; }
+      header ul li:nth-child(10) {
+        padding-left: 82%; }
+      header ul li:nth-child(11) {
+        padding-left: 28%; }
+      header ul li:nth-child(12) {
+        padding-left: 53%; }
+      header ul li:nth-child(13) {
+        padding-left: 90%; }
+  header h1, header h2 {
+    text-align: center;
+    color: #fff07a; }
+  header h1 {
+    font-size: 40px;
+    margin-bottom: 20px; }
+  header h2 {
+    font-size: 26px; }
+
+.cantona {
+  padding-bottom: 25%;
+  margin: 5px 0;
+  font-size: 70px;
+  -webkit-animation: color-change 1s infinite;
+  -moz-animation: color-change 1s infinite;
+  -o-animation: color-change 1s infinite;
+  -ms-animation: color-change 1s infinite;
+  animation: color-change 3s infinite; }
+
+@-webkit-keyframes color-change {
+  0% {
+    color: #fcfbdb; }
+  50% {
+    color: #fcc28f; }
+  100% {
+    color: #fff07a; } }
+@-moz-keyframes color-change {
+  0% {
+    color: #fcfbdb; }
+  50% {
+    color: #fcc28f; }
+  100% {
+    color: #fff07a; } }
+@-ms-keyframes color-change {
+  0% {
+    color: #fcfbdb; }
+  50% {
+    color: #fcc28f; }
+  100% {
+    color: #fff07a; } }
+@-o-keyframes color-change {
+  0% {
+    color: #fcfbdb; }
+  50% {
+    color: #fcc28f; }
+  100% {
+    color: #fff07a; } }
+@keyframes color-change {
+  0% {
+    color: #fcfbdb; }
+  50% {
+    color: #fcc28f; }
+  100% {
+    color: #fff07a; } }
+.showButton {
+  bottom: 15%; }
+
+.place {
+  background: url("../media/bgplace.jpg") center;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  box-sizing: border-box;
+  margin: 0;
+  padding-top: 2%; }
+  .place h1 {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 240, 122, 0.6);
+    margin: 0 4% 2% 4%;
+    text-align: center;
+    justify-content: center;
+    font-size: 2em; }
+
+.placecontainer {
+  flex-flow: row wrap;
+  justify-content: space-around;
+  text-align: center; }
+
+.placeinfo {
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff07a;
+  height: auto; }
+
+@media (max-height: 730px) {
+  .showButton {
+    bottom: 5%; } }
+@media (max-width: 900px) {
+  header ul li:nth-child(13) {
+    padding-left: 84%; } }
+@media (max-width: 767px) {
+  .placeinfo {
+    width: 90%;
+    margin: 1% 0;
+    font-size: 0.7em; }
+
+  .backButton {
+    margin-top: 2%;
+    position: relative; }
+
+  header {
+    text-align: center; }
+    header ul li {
+      padding-left: 0 !important;
+      margin: 2% 0; }
+
+  .showButton {
+    bottom: 5%; } }
+.backButton {
+  bottom: 10%; }
+
+/*animated underline*/
+a {
+  position: relative;
+  color: #fff07a;
+  text-decoration: none; }
+
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff07a;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
+
+/*# sourceMappingURL=style.css.map */
