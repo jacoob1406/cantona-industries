@@ -13,6 +13,13 @@ and open the template in the editor.
   font-family: 'Oswald', sans-serif;
   letter-spacing: 2px; }
 
+header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
 .showButton, .backButton {
   position: absolute;
   left: 50%;
@@ -45,10 +52,16 @@ header {
   height: 100vh;
   width: 100vw;
   background-size: cover;
-  display: flex;
   align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
-  flex-direction: column; }
+  -ms-flex-pack: center;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column; }
   header ul {
     width: 100%;
     padding-top: 3%;
@@ -161,12 +174,23 @@ header {
     background-color: rgba(255, 240, 122, 0.6);
     margin: 0 4% 2% 4%;
     text-align: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
     justify-content: center;
+    -ms-flex-pack: center;
     font-size: 2em; }
 
 .placecontainer {
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  justify-content: space-around;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
   text-align: center; }
 
 .placeinfo {
@@ -175,13 +199,13 @@ header {
   color: #fff07a;
   height: auto; }
 
-@media (max-height: 730px) {
+@media screen and (max-height: 730px) {
   .showButton {
     bottom: 5%; } }
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   header ul li:nth-child(13) {
     padding-left: 84%; } }
-@media (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .cantona {
     padding-bottom: 0; }
 
@@ -230,8 +254,15 @@ a:hover:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1); }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
   header {
-    justify-content: flex-start; } }
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
+    -ms-flex-pack: flex-start; } }
+@media (min-width: 768px) and (max-height: 560px) {
+  .showButton {
+    bottom: 40% !important; } }
 
 /*# sourceMappingURL=style.css.map */

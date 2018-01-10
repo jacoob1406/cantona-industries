@@ -24,13 +24,45 @@ $mainCol: #fff07a;
     border-radius: $radius;
 }
 
-@mixin transition {
-    @for $i from 1 through 13 {
-        &:nth-child(#{$i}) {
-            transition: all .2s #{$i * .5}s ease-in;
-        }
-    }
+%flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }
+
+@mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex: $values;
+    -webkit-flex: $values;
+    -ms-flex: $values;
+    flex: $values;
+}
+
+@mixin flex-flow($flow) {
+    -webkit-flex-flow: $flow;
+    -moz-flex-flow: $flow;
+    -ms-flex-flow: $flow;
+    flex-flow: $flow;
+}
+
+@mixin order($val) {
+    -webkit-box-ordinal-group: $val;  
+    -moz-box-ordinal-group: $val;     
+    -ms-flex-order: $val;     
+    -webkit-order: $val;  
+    order: $val;
+}
+
+@mixin justify($justify) {
+    -webkit-justify-content: $justify;
+    -moz-justify-content: $justify;
+    -ms-justify-content: $justify;
+    justify-content: $justify;
+    -ms-flex-pack: $justify;
+}
+
 
 %buttons{
     position: absolute;
@@ -66,10 +98,10 @@ header{
     height: 100vh;
     width: 100vw;
     background-size: cover;
-    display: flex;
+    @extend %flexbox;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    @include justify(center);
+    @include flex-flow(column);
 
     ul{
         width: 100%;
@@ -91,7 +123,6 @@ header{
 
         li{
             margin-bottom: 1%;
-            // @include transition;
 
             &:nth-child(1){
                 padding-left: 5%;
@@ -221,13 +252,13 @@ header{
         background-color: rgba(255, 240, 122, 0.6);
         margin: 0 4% 2% 4%;
         text-align: center;
-        justify-content: center;
+        @include justify(center);
         font-size: 2em
     }
 }
 .placecontainer{
-    flex-flow: row wrap;
-    justify-content: space-around;
+    @include flex-flow(row wrap);
+    @include justify(center);
     text-align: center;
 }
 
@@ -238,13 +269,13 @@ header{
     height: auto;
 }
 
-@media (max-height: 730px){
+@media screen and (max-height: 730px){
     .showButton{
         bottom: 5%;
     }
 }
 
-@media (max-width: 900px){
+@media screen and (max-width: 900px){
 
     header {
         ul{
@@ -259,7 +290,7 @@ header{
 }
 
 
-@media (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
     .cantona{
         padding-bottom: 0;
@@ -323,9 +354,19 @@ a:hover:before {
     transform: scaleX(1);
 }
 
-@media (max-width: 400px){
+@media screen and (max-width: 400px){
 
     header{
+        -webkit-justify-content: flex-start;
+        -moz-justify-content: flex-start;
+        -ms-justify-content: flex-start;
         justify-content: flex-start;
+        -ms-flex-pack: flex-start;
     }
 } 
+
+@media  (min-width: 768px) and (max-height: 560px)  {
+    .showButton{
+        bottom: 40% !important;
+    }
+}
