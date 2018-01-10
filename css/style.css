@@ -264,5 +264,8 @@ a:hover:before {
 @media (min-width: 768px) and (max-height: 560px) {
   .showButton {
     bottom: 40% !important; } }
+@media (min-width: 401px) and (max-width: 600px) and (max-height: 560px) {
+  .showButton {
+    bottom: 80%; } }
 
 /*# sourceMappingURL=style.css.map */
